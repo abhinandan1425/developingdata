@@ -1,0 +1,27 @@
+---
+title: Developing Data Product
+author: Abhinandan Jain
+date: 23/10/2020
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+map <- leaflet() %>%
+addTiles()
+map
+```
+```{r}
+Taj <- c("<a href= 'https://www.tajmahal.gov.in/view_taj.html' >Taj Mahal</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=27.173891, lng=78.042068, popup = Taj)
+```
+Shows the exact location of The Taj Mahal.
